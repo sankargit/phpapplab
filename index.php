@@ -35,7 +35,7 @@ text-align: center;
 			<div id="main">
 				<p>
 
-# your PHP content goes here
+#Make sure you delete me and add your php here.
 
 				</p>
 			</div>
