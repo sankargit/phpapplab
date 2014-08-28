@@ -34,9 +34,15 @@ text-align: center;
 			<div id="header"><img src="<<banner file to S3>>"></div>
 			<div id="main">
 				<p>
-
-#Make sure you delete me and add your php here.
-
+				<?php
+$url = "http://169.254.169.254/latest/meta-data/instance-id";
+$instance_id = file_get_contents($url);
+echo "Instance ID: <b>" . $instance_id . "</b><br/>";
+$url = "http://169.254.169.254/latest/meta-data/placement/availability-zone";
+$zone = file_get_contents($url);
+echo "Zone: <b>" . $zone . "</b><br/>";
+echo "<p style='background-color:green;'><b>I am the green deployment</b></p>"
+?>
 				</p>
 			</div>
 			<div id="footer"> </div>
